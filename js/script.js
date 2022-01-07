@@ -12,9 +12,6 @@ onmousemove = function (e) {
 };
 
 function toggleTheme() {
-  // Obtains an array of all <link>
-  // elements.
-  // Select your element using indexing.
   console.log("toggleTheme");
   var theme = document.getElementById("theme");
   var icon = document.getElementById("darkIcon");
