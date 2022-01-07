@@ -6726,8 +6726,8 @@ fieldset:disabled .btn {
 }
 
 body {
-  background-color: #2c2f33;
-  color: #dadada;
+  background-color: #e0e0e0;
+  color: #2c2f33;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
@@ -6746,13 +6746,13 @@ body {
 
 .sidebar {
   min-height: 400px;
+  z-index: 500;
   position: absolute;
   min-width: 90px;
   max-width: 100px;
   top: 50%;
-  z-index: 500;
   transform: translateY(-50%);
-  background: #2c2f33;
+  background: #e0e0e0;
   border-radius: 16.8921px;
 }
 
@@ -6766,14 +6766,15 @@ body {
 
 .sidebar .nav-button:hover {
   background: #0b4e88;
+  color: #e0e0e0;
 }
 
 .neo-shadow-xl {
-  box-shadow: -6.22302px -6.22302px 18.6691px #3b4451, 6.22302px 6.22302px 18.6691px #000000;
+  box-shadow: -6.22302px -6.22302px 18.6691px #ffffff, 6.22302px 6.22302px 18.6691px #bebebe;
 }
 
 .neo-shadow-l, .neo-input:focus {
-  box-shadow: -4.22302px -4.22302px 15px #3b4451, 4.22302px 4.22302px 15px #000000;
+  box-shadow: -4.22302px -4.22302px 15px #ffffff, 4.22302px 4.22302px 15px #bebebe;
 }
 
 .navbar {
@@ -6782,7 +6783,7 @@ body {
 
 .pressed, .neo-shadow-xl.button:active,
 .neo-shadow-l.button:active, .button.neo-input:active:focus {
-  box-shadow: inset -6.22302px -6.22302px 6.22302px #3b4451, inset 3.73381px 3.73381px 6.22302px #000000;
+  box-shadow: inset -6.22302px -6.22302px 6.22302px #ffffff, inset 3.73381px 3.73381px 6.22302px #bebebe;
 }
 
 .button {
@@ -6810,7 +6811,7 @@ body {
   margin-left: 20px;
   transform: translate(0, -50%);
   padding: 10px 20px;
-  color: #dadada;
+  color: #e0e0e0;
   background-color: #0b4e88;
   font-weight: normal;
   font-size: 13px;
@@ -6913,7 +6914,7 @@ body {
 }
 
 .form-wrapper {
-  box-shadow: 14px 14px 40px #000000, -7px -7px 30px #3b4451;
+  box-shadow: 14px 14px 40px #bebebe, -7px -7px 30px #ffffff;
   border-radius: 8px;
 }
 
@@ -6943,9 +6944,9 @@ body {
   padding: 0.8rem 1.6rem;
   border-radius: 4px;
   border: none;
-  background-color: #2c2f33;
+  background-color: #e0e0e0;
   transition: all 0.4s;
-  color: #dadada;
+  color: #2c2f33;
 }
 
 .neo-input:focus {
@@ -6956,17 +6957,15 @@ hr {
   border: none;
   margin: 3rem 0;
   padding: 2px 0;
-  box-shadow: inset -1.22px -1.22px 3px #3b4451, inset 1px 1px 2px #000000;
+  box-shadow: inset -1.22px -1.22px 3px #ffffff, inset 1px 1px 2px #bebebe;
 }
 
 .color-red {
   background-color: #880b0b;
-  box-shadow: -6.22302px -6.22302px 18.6691px #4f0606, 6.22302px 6.22302px 18.6691px black;
 }
 
 .color-green {
   background-color: #0c8627;
-  box-shadow: -6.22302px -6.22302px 18.6691px #074e17, 6.22302px 6.22302px 18.6691px black;
 }
 
 /* width */
@@ -6976,15 +6975,15 @@ hr {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2c2f33;
-  box-shadow: inset -6.22302px -6.22302px 6.22302px #3b4451, inset 3.73381px 3.73381px 6.22302px #000000;
+  background: #e0e0e0;
+  box-shadow: inset -6.22302px -6.22302px 6.22302px #ffffff, inset 3.73381px 3.73381px 6.22302px #bebebe;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #2c2f33;
+  background: #e0e0e0;
   /* Black / Shadow / Button */
-  box-shadow: -5px -5px 15px #3b4451, 5px 5px 15px #000000;
+  box-shadow: -5px -5px 15px #ffffff, 5px 5px 15px #bebebe;
   border-radius: 21px;
 }
 /*# sourceMappingURL=style.css.map */

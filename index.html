@@ -9,7 +9,8 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link id="theme" rel="stylesheet" href="css/style.css" />
+    <!-- <link id="theme" rel="stylesheet" type="text/css" href="light.css" /> -->
     <title>Document</title>
   </head>
   <body>
@@ -49,6 +50,18 @@
                   <i></i>
                 </div>
               </div>
+              <div
+                class="nav-button button neo-shadow-xl tool-tip"
+                onclick="toggleTheme()"
+              >
+                <i id="darkIcon" class="ri-moon-fill"></i>
+                <div class="right">
+                  <h5>Dark Mode</h5>
+                  <p>Toggle Dark Mode</p>
+
+                  <i></i>
+                </div>
+              </div>
             </nav>
           </div>
         </div>
@@ -70,6 +83,7 @@
                   type="text"
                   class="neo-input pressed px-0"
                   width="50px"
+                  value="0"
                 />
                 of 1
               </div>
@@ -81,8 +95,11 @@
             </div>
           </div>
           <div
+            id="drop"
             class="dropzone pressed my-4 d-flex align-items-center justify-content-center flex-column"
           >
+            <div id="x" class="coordinate x-coordinate"></div>
+            <div id="y" class="coordinate y-coordinate"></div>
             <i class="ri-upload-2-line ri-5x"></i>
             <small>Drop Files here</small>
           </div>
@@ -102,68 +119,127 @@
               <div class="pressed tab-button active">visualized data</div>
               <div class="neo-shadow-xl ms-3 tab-button">standardized JSON</div>
             </div>
-            <div class="form-wrapper p-4 mt-4">
-              <div class="form-options mb-3">
-                <div class="dropdown-button neo-shadow-l rounded">
-                  Labels <i class="ri-arrow-down-s-line ms-5"></i>
+            <div class="form-wrapper py-4 ps-4 pe-1 mt-4">
+              <div class="form-content pe-4">
+                <div class="form-options mb-3">
+                  <div class="dropdown-button neo-shadow-l rounded">
+                    Labels <i class="ri-arrow-down-s-line ms-5"></i>
+                  </div>
+                  <div
+                    class="neo-shadow-l ms-3 p-3 d-inline-block border-curved-sm"
+                  >
+                    <i class="ri-pencil-line ri-xl"></i>
+                  </div>
                 </div>
-                <div
-                  class="neo-shadow-l ms-3 p-3 d-inline-block border-curved-sm"
-                >
-                  <i class="ri-pencil-line ri-xl"></i>
+                <form class="neo-form">
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                </form>
+                <hr />
+                <div class="form-options mb-3">
+                  <div class="dropdown-button neo-shadow-l rounded">
+                    Labels <i class="ri-arrow-down-s-line ms-5"></i>
+                  </div>
+                  <div
+                    class="neo-shadow-l ms-3 p-3 d-inline-block border-curved-sm"
+                  >
+                    <i class="ri-pencil-line ri-xl"></i>
+                  </div>
                 </div>
+                <form class="neo-form">
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                  <div class="neo-form-group mb-3">
+                    <label>Label</label>
+                    <input
+                      type="email"
+                      class="neo-form-control neo-input pressed"
+                      placeholder="Enter label"
+                    />
+                    <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
+                  </div>
+                </form>
               </div>
-              <form>
-                <div class="neo-form-group mb-3">
-                  <label>Label</label>
-                  <input
-                    type="email"
-                    class="neo-form-control neo-input pressed"
-                    placeholder="Enter label"
-                  />
-                  <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
-                </div>
-                <div class="neo-form-group mb-3">
-                  <label>Label</label>
-                  <input
-                    type="email"
-                    class="neo-form-control neo-input pressed"
-                    placeholder="Enter label"
-                  />
-                  <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
-                </div>
-                <div class="neo-form-group mb-3">
-                  <label>Label</label>
-                  <input
-                    type="email"
-                    class="neo-form-control neo-input pressed"
-                    placeholder="Enter label"
-                  />
-                  <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
-                </div>
-                <div class="neo-form-group mb-3">
-                  <label>Label</label>
-                  <input
-                    type="email"
-                    class="neo-form-control neo-input pressed"
-                    placeholder="Enter label"
-                  />
-                  <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
-                </div>
-                <div class="neo-form-group mb-3">
-                  <label>Label</label>
-                  <input
-                    type="email"
-                    class="neo-form-control neo-input pressed"
-                    placeholder="Enter label"
-                  />
-                  <i class="ri-checkbox-circle-line ri-2x dimmed"></i>
-                </div>
-              </form>
-              <hr />
 
               <div
-                class="py-2 d-flex align-items-center flex-lg-shrink-1 justify-content-between button-wrapper"
+                class="py-3 d-flex align-items-center flex-lg-shrink-1 justify-content-between button-wrapper"
               >
                 <div
                   class="button neo-shadow-l py-2 px-4 border-curved-sm d-flex align-items-center justify-content-around me-4"
@@ -175,12 +251,12 @@
                   <div
                     class="button color-red p-2 border-curved-sm d-flex align-items-center justify-content-around ms-4"
                   >
-                    <img src="/assets/icons/pdf.svg" width="20" alt="" />
+                    <img src="./assets/icons/pdf.svg" width="20" alt="" />
                   </div>
                   <div
                     class="button color-green p-2 border-curved-sm d-flex align-items-center justify-content-around ms-3 me-4"
                   >
-                    <img src="/assets/icons/excel.svg" width="20" alt="" />
+                    <img src="./assets/icons/excel.svg" width="20" alt="" />
                   </div>
                 </div>
 
@@ -203,5 +279,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
